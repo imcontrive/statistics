@@ -12,19 +12,19 @@ function StatisticsHeader({ statistics, title }) {
       <tr>
         <td>{title} (Mean)</td>
         {Object.keys(statistics).map(alcoholClass => (
-          <td key={alcoholClass}>{statistics[alcoholClass]?.mean?.toFixed(2)}</td>
+          <td key={alcoholClass}>{statistics[alcoholClass]?.mean?.toFixed(3)}</td>
         ))}
       </tr>
       <tr>
         <td>{title} (Median)</td>
         {Object.keys(statistics).map(alcoholClass => (
-          <td key={alcoholClass}>{statistics[alcoholClass].median?.toFixed(2)}</td>
+          <td key={alcoholClass}>{statistics[alcoholClass].median?.toFixed(3)}</td>
         ))}
       </tr>
       <tr>
         <td>{title} (Mode)</td>
         {Object.keys(statistics).map(alcoholClass => (
-          <td key={alcoholClass}>{statistics[alcoholClass].mode?.toFixed(2)}</td>
+          <td key={alcoholClass}>{statistics[alcoholClass].mode?.toFixed(3)}</td>
         ))}
       </tr>
     </thead>

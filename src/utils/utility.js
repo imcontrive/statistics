@@ -14,7 +14,7 @@ export default function calculateStatistics(data) {
   for (const alcoholClass in statistics) {
     const values = statistics[alcoholClass];
 
-    const mean = values.reduce((sum, value) => sum + value, 0) / values.length || 0;
+    const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
     values.sort((a, b) => a - b);
     const middle = Math.floor(values.length / 2);
     const median = values.length % 2 === 0 ? (values[middle - 1] + values[middle]) / 2 : values[middle];
